@@ -1,0 +1,75 @@
+.StepperComponent {
+	margin: 5rem 0rem;
+	border-radius: 6px;
+
+	.wrapper {
+		position: relative;
+		.line {
+			position: absolute;
+			top: 50%;
+			left: 0px;
+			transform: translateY(-50%);
+			z-index: -1;
+			width: 100%;
+			height: 2px;
+			background-color: var(--border-color);
+
+			.fill {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 100%;
+				background-color: #10b981;
+			}
+		}
+
+		.steps {
+			position: relative;
+			display: flex;
+			justify-content: space-between;
+
+			.step {
+				position: relative;
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				background-color: #d1d5db;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				&::after {
+					content: attr(data-count);
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					color: white;
+				}
+
+				&.done,
+				&.active {
+					background-color: #10b981;
+				}
+
+				&.done {
+					&::after {
+						content: "✔";
+					}
+				}
+
+				&.active {
+					span {
+						font-weight: 600;
+					}
+				}
+
+				span {
+					position: absolute;
+					bottom: -25px;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+			}
+		}
+	}
+}

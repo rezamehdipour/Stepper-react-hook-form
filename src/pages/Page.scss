@@ -1,0 +1,72 @@
+.PersonalPage,
+.IdentityPage,
+.ContactPage,
+.AuthenticationPage {
+	.inputs {
+		display: grid;
+		grid-template-columns: repeat(4, 20%);
+		justify-content: space-between;
+	}
+
+	label {
+		display: inline-block;
+		&:first-of-type {
+			margin-bottom: 0.3rem;
+			opacity: 0.8;
+		}
+	}
+
+	input:not([type="radio"]) {
+		width: 100%;
+	}
+
+	input[type="text"],
+	input[type="date"],
+	input[type="tel"],
+	input[type="email"],
+	input[type="password"],
+	select {
+		padding: 0.5rem;
+		border-radius: 6px;
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		font-size: 1.6rem;
+	}
+
+	input[type="radio"] {
+		margin-left: 0.5rem;
+		&:not(:last-of-type) {
+			margin-right: 2rem;
+		}
+	}
+
+	select {
+		width: 100%;
+		padding: 0.5rem;
+		font-size: 1.6rem;
+		text-transform: capitalize;
+		outline: none;
+
+		option {
+			text-transform: capitalize;
+		}
+	}
+
+	input[type="tel"] {
+		padding: 0.5rem;
+	}
+
+	.error {
+		color: #dc2626;
+		font-size: 1.4rem;
+	}
+}
+
+.PersonalPage {
+	.qgNNn {
+		margin-left: 1rem;
+		color: black;
+		background-color: #d8d8d8;
+		padding: 3px 5px;
+		border-radius: 6px;
+	}
+}
